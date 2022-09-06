@@ -1,86 +1,129 @@
-<!DOCTYPE HTML>
+<DOCTYPE HTML>
 <html lang="pt-br">
-<head>
-    <style type="text/css">
-        table, tr, td{
-            border: 1px solid;
-        }
-    </style>
-    
-    <meta charset="UTF-8">
-    <title>aula 2</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title> Aula de PHP </title>
+    </head>
 <body>
-    <a href="#">Home</a>
-    <a href="./exemplo.php">Exemplo</a>
-<hr>
-<h1> Página Home</h1>
+<?php
 
-<table id="Tabela1" style="border: 1px solid;"> <!-- Inicia a Tabela -->
-    <tr> <!-- Inicia a Linha -->
-        <td> <!-- Inicia a Coluna -->
-            Coluna 1x1
-        </td> <!-- Finaliza a Coluna -->
-        <td>
-            Coluna 2x1
-        </td>
-        <td rowspan="2" class="Coluna32">
-            Coluna 3x1
-        </td>
-        <td class="Coluna4">
-           <b> 4x1</b>
-        </td>
-    </tr> <!-- Finaliza a Linha -->
-    <tr>
-        <td colspan="2">Coluna 1 e 2 x2 </td>
-        <td  class="Coluna4">
-            <p>Coluna 4 x2
-                <b>Coluna</b>
-            </p>
-         </td>
-    </tr>   
-</table> <!-- Finaliza a Tabela -->
+print "Olá mundo.";
+echo "Hello word.";
 
-<hr>
-    <form>
-        <label> Nome: </label>
-        <input type="text" value="Allan" disabled>
-        Sobrenome:
-        <input type="text" placeholder="Poem aqui o sobrenome"> <br>
-        <input type="button" value="Start"> 
-        <input type="reset" value="Reset">
-        <input type="submit" value="Enviar">
-    </form>
-    <?php
+$var = "5";
 
-        echo "<hr>";
-        print"hello word <br>";
+print $var;
 
-        $var = "texto da variavel";
-        print $var;
+?>
+<br>
+<?php
 
-        echo "<hr>";
+echo $var;
 
-        $var2 = "variavel 2";
-        print $var2;
+echo "<br>";
+$var2 = print "Variavel com print <br>";
+print $var2;
 
-        echo "<hr>";
+//$var3
 
-        $var3 = print"Print em variavel";
-        print $var3;
+$var4 = "20";
+$var5 = "2";
+$total = $var4 + $var5;
 
-        echo "<hr>";
+echo "<br> O total é:".$total."!";
+echo "<br> O total é:$total!"; 
 
-        $var5 = 1.4. "meu num";
-        echo gettype($var5);
+echo "<br>";
+echo $var4 + (int)$var;
 
-        echo $var5;
+echo "<hr>";
 
-        echo '<hr>';
-        
-        $a = 10;
-        $b = 5;
+echo gettype($var5);
 
-        echo $a + $b;
-    ?>
+echo "<br>";
+
+$var6 = "10 pessoas";
+$var6 = (int)$var6;
+
+echo $var4 + $var6;
+
+echo "<br> $var6";
+
+echo "<hr>";
+
+$array = array(
+"cinco" => "Pedro <br>", 
+"pessoa_1" => "Aninha <br>",
+"pessoa_2" => "Djulinha <br>", 
+"pessoa_3" => "Euzinho <br>",
+);
+
+/*
+$array = array(
+1 => "Pedro <br>", 1 inteiro
+1.5 => "Aninha <br>", dps do ponto não funciona ele ignora
+"1" => "Djulinha <br>", 1 string
+true => "Euzinho <br>", true é 1
+);
+*/
+
+print_r ($array);
+echo "<br>";
+var_dump ($array);
+
+echo "<hr>";
+
+if ($var4 > $var5) {
+    echo "Variavel 4 é maior<br>";
+    if($var4 == "20"){
+        echo "Variavel 4 é igual a 20<br>";
+    }else {
+        echo "Variavel 4 não é uma string<br>";
+    }
+}elseif ($var5 == 50){
+    echo "Variavel 5 é 50<br>";
+}else {
+    echo "Variavel 5 é maior<br>";
+}
+/*
+sem ; dps das chaves
+=  atribuição
+== sinal de igual
+=== compara se é exatamente igual o tipo tem que ser igual string = string, int = int ...
+*/ 
+echo "<hr>";
+$i=0; // sem isso da warnig 
+while ($i <= 10){
+    echo $i++; //acrescenta
+    echo "<br>"; 
+}
+echo "<hr>";
+$a=10; // sem isso da warnig 
+while ($a > 0 ){
+    echo $a--; //descrecenta
+    echo "<br>"; 
+}
+echo "<hr>";
+
+/*$i=10;
+do{
+    $i--;
+    echo "$i";
+     
+}while ($i--10)
+*/
+
+for ($j = 0;$j < 10;$j++ ){
+    echo"$j";
+}
+echo "<hr>";
+
+for ($j = 0, $cont = 0;$j < 10; $cont++ ){
+    echo"$j cont: $cont<br> ";
+    $j++;
+}
+
+?>
+
 </body>
+</html>            
